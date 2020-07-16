@@ -43,7 +43,8 @@ class MainFragment : Fragment() {
                 }
                 Status.ERROR -> {
                     pbar_loading.visibility = View.INVISIBLE
-                    message.text = "error loading data from network"
+                    //message.text = "error loading data from network"
+                    message.text = networkResource.msg
                 }
             }
         })
