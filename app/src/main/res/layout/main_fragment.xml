@@ -30,6 +30,16 @@
             android:layout_gravity="center"
             android:visibility="invisible"/>
 
+        <com.airbnb.lottie.LottieAnimationView
+            android:visibility="invisible"
+            android:id="@+id/animationView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            app:lottie_rawRes="@raw/loadanimation"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+
     </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

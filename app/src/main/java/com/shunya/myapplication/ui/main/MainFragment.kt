@@ -31,18 +31,21 @@ class MainFragment : Fragment() {
             when (networkResource.status) {
                 Status.LOADING -> {
                     //message.text = "loading data from network"
-                    pbar_loading.visibility = View.VISIBLE
+                    //pbar_loading.visibility = View.VISIBLE
+                    animationView.visibility = View.VISIBLE
                 }
                 Status.SUCCESS -> {
                     val person = networkResource.data
                     person?.let {
-                        pbar_loading.visibility = View.INVISIBLE
+                        //pbar_loading.visibility = View.INVISIBLE
+                        animationView.visibility = View.INVISIBLE
                         message.text =
                             person.firstName + " " + person.lastName + "\n" + person.email
                     }
                 }
                 Status.ERROR -> {
-                    pbar_loading.visibility = View.INVISIBLE
+                    //pbar_loading.visibility = View.INVISIBLE
+                    animationView.visibility = View.INVISIBLE
                     //message.text = "error loading data from network"
                     message.text = networkResource.msg
                 }
